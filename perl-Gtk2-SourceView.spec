@@ -52,7 +52,7 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/%{pdir}/%{pnam}/*.pod
+rm -f $RPM_BUILD_ROOT%{perl_vendorarch}/Gtk2/SourceView/*.pod
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -60,10 +60,10 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS README ChangeLog
-%{perl_vendorarch}/%{pdir}/%{pnam}.pm
-%dir %{perl_vendorarch}/%{pdir}/%{pnam}
-%dir %{perl_vendorarch}/auto/%{pdir}/%{pnam}
-%attr(755,root,root) %{perl_vendorarch}/auto/%{pdir}/%{pnam}/*.so
-%{perl_vendorarch}/%{pdir}/%{pnam}/Install
-%{perl_vendorarch}/auto/%{pdir}/%{pnam}/*.bs
+%{perl_vendorarch}/Gtk2/SourceView.pm
+%dir %{perl_vendorarch}/Gtk2/SourceView
+%{perl_vendorarch}/Gtk2/SourceView/Install
+%dir %{perl_vendorarch}/auto/Gtk2/SourceView
+%attr(755,root,root) %{perl_vendorarch}/auto/Gtk2/SourceView/*.so
+%{perl_vendorarch}/auto/Gtk2/SourceView/*.bs
 %{_mandir}/man3/*
