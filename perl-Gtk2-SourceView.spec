@@ -6,7 +6,7 @@
 %define		pdir	Gtk2
 %define		pnam	SourceView
 Summary:	Perl gtksourceview bindings
-Summary(pl.UTF-8):   Wiązania gtksourceview dla Perla
+Summary(pl.UTF-8):	Wiązania gtksourceview dla Perla
 Name:		perl-Gtk2-SourceView
 Version:	1.000
 Release:	1
