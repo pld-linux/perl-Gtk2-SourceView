@@ -6,7 +6,7 @@
 %define		pdir	Gtk2
 %define		pnam	SourceView
 Summary:	Perl gtksourceview bindings
-Summary(pl):	Wi±zania gtksourceview dla Perla
+Summary(pl.UTF-8):   WiÄ…zania gtksourceview dla Perla
 Name:		perl-Gtk2-SourceView
 Version:	1.000
 Release:	1
@@ -31,8 +31,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 This module provides Perl access to gtksourceview library.
 
-%description -l pl
-Ten modu³ daje dostêp z poziomu Perla do biblioteki gtksourceview.
+%description -l pl.UTF-8
+Ten moduÅ‚ daje dostÄ™p z poziomu Perla do biblioteki gtksourceview.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
