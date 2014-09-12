@@ -66,5 +66,4 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/Gtk2/SourceView/Install
 %dir %{perl_vendorarch}/auto/Gtk2/SourceView
 %attr(755,root,root) %{perl_vendorarch}/auto/Gtk2/SourceView/*.so
-%{perl_vendorarch}/auto/Gtk2/SourceView/*.bs
 %{_mandir}/man3/*
