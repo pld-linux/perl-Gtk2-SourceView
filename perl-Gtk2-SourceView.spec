@@ -2,7 +2,6 @@
 # Conditional build:
 %bcond_with	tests	# perform "make test" (requires X server)
 #
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Gtk2
 %define		pnam	SourceView
 Summary:	Perl gtksourceview bindings
