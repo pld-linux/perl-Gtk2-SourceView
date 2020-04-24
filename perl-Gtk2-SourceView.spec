@@ -22,6 +22,7 @@ BuildRequires:	perl-Gnome2-Print >= 0.951
 BuildRequires:	perl-Gtk2 >= 1.133
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
+BuildRequires:	rpmbuild(macros) >= 1.745
 Requires:	perl-Glib >= 1.132
 Requires:	perl-Gnome2-Print >= 0.951
 Requires:	perl-Gtk2 >= 1.133
