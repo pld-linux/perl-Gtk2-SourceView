@@ -1,0 +1,45 @@
+--- Gtk2-SourceView-1.013/Makefile.PL.orig	2021-01-11 08:14:56.000000000 +0100
++++ Gtk2-SourceView-1.013/Makefile.PL	2021-06-20 08:18:08.368087422 +0200
+@@ -45,8 +45,8 @@
+ 
+ mkdir 'build', 0777;
+ 
+-#our %pkgcfg = ExtUtils::PkgConfig->find ('gtksourceview-1.0 >= '
+-#				     .$build_reqs{GtkSourceView});
++our %pkgcfg = ExtUtils::PkgConfig->find ('gtksourceview-1.0 >= '
++				     .$build_reqs{GtkSourceView});
+ 
+ # now we're ready to start creating the makefile.
+ # we need to use ExtUtils::Depends to get relevant information out of
+@@ -62,8 +62,8 @@
+     Glib::MakeHelper->do_pod_files (@xs_files),
+ );
+ 
+-#ExtUtils::PkgConfig->write_version_macros ("build/gtksourceviewperl-version.h",
+-#                                           'gtksourceview-1.0' => 'GTK_SOURCE_VIEW');
++ExtUtils::PkgConfig->write_version_macros ("build/gtksourceviewperl-version.h",
++                                           'gtksourceview-1.0' => 'GTK_SOURCE_VIEW');
+ 
+ #
+ # autogeneration
+@@ -72,8 +72,8 @@
+ Gtk2::CodeGen->write_boot (ignore => '^Gtk2::SourceView$');
+ 
+ my $sview = ExtUtils::Depends->new ('Gtk2::SourceView', 'Gnome2::Print', 'Gtk2', 'Glib');
+-#$sview->set_inc ($pkgcfg{cflags} . ' -I./build ');
+-#$sview->set_libs ($pkgcfg{libs});
++$sview->set_inc ($pkgcfg{cflags} . ' -I./build ');
++$sview->set_libs ($pkgcfg{libs});
+ $sview->add_xs (@xs_files);
+ $sview->add_pm (%pm_files);
+ my $cwd = cwd();
+--- Gtk2-SourceView-1.013/gtksourceviewperl.h.orig	2020-10-18 06:06:53.000000000 +0200
++++ Gtk2-SourceView-1.013/gtksourceviewperl.h	2021-06-20 08:20:46.893895280 +0200
+@@ -29,7 +29,6 @@
+ #include <gtksourceview/gtksourcelanguage.h>
+ #include <gtksourceview/gtksourcelanguagesmanager.h>
+ #include <gtksourceview/gtksourcemarker.h>
+-#include <gtksourceview/gtksourceprintjob.h>
+ #include <gtksourceview/gtksourcestylescheme.h>
+ #include <gtksourceview/gtksourcetag.h>
+ #include <gtksourceview/gtksourcetagstyle.h>
