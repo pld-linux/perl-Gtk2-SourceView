@@ -58,7 +58,7 @@ Pliki programistyczne wiązań Gtk2-SourceView dla Perla.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %{__rm} xs/GtkSourcePrintJob.xs
 
